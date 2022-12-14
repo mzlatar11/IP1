@@ -11,6 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 
@@ -22,29 +23,54 @@
  margin-left:10px;
 }
 
+#ul {
+  display: flex;
+  list-style: none;
+  max-width: 600px;
+  margin-block: 2rem;
+  margin-inline: auto;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
 
+#li {
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 3rem;
 
+  aspect-ratio: 2/1;
+  width: 100%;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+#li:nth-child(odd) {
+  background-color: #cdb891;
+}
+
+#li:nth-child(even) {
+  background-color: #daa06d;
+}
 </style>
 
 </head>
 
 <body>
 	<header>
-		<div class="container1">
-		<div class="navigacija">
-		<nav>
-			<ul>
+		<section class="navigacija">
+    <input id="izbornikpromjena" type="checkbox" />
+    <label class='izbornik-gumbomot' for="izbornikpromjena">
+    <div class='izbornik-gumb'></div>
+  </label>
+    <ul class="izbornik">
 			<li><a href="index.html">Početna stranica</a></li>
 			  <li><a href="novosti.html">Novosti</a></li>
 			  <li><a href="galerija.html">Galerija</a></li>
 			  <li><a href="o_nama.html">O nama</a></li>
 			  <li><a href="kontakt.html">Kontakt</a></li>
 			</ul>
-		</nav>
-		</div>
-		
-		<div class="logo"><img class="logo" src="logo.png" alt="logo"></div>
-		</div>
+  </section>
 	</header>
 	<main>
 	<div class="container">
@@ -55,13 +81,24 @@
 		<h4>Dobrodošli!</h4>
 	</div>
 	<div class="image">
-		<figure>
+		<ul id="ul">
+  <li id="li"><figure>
 		<img src="proizvod_naslovna.jpg" alt="proizvod" title="proizvod" usemap="#klik">
 			<map name="klik">
 				<area shape="rect" coords="34,44,270,350" href="galerija.html">
 			</map>
 			<figcaption>Savršena kuhinja za male životne prostore</figcaption>
 		</figure>
+  </li>
+  <li id="li"><figure>
+		<img src="naslovna1.jpg" alt="proizvod">
+			<figcaption>Ugradbeni ormar po mjeri</figcaption>
+		</figure></li>
+  <li id="li"><figure>
+		<img src="naslovna2.jpg" alt="proizvod">
+			<figcaption>Dječja soba</figcaption>
+		</figure></li>
+</ul>
 	</div>
 	</div>
 	<p>Društvene mreže:</p>
@@ -70,7 +107,7 @@
 		<a href="https://www.instagram.com/"><img src="instagram.png"style="width:25px"></a>
 	</main>
 	<footer style="background-color:#F0D1B8; height: 30px;">
-		<p align="center">Copyright &copy; <a style="color:black; font-size:15px" href="https://github.com/mzlatar11/IP"> Zlatar Martina, 2022.</a></p>
+		<p align="center">Copyright &copy; <a style="color:black; font-size:15px"> Zlatar Martina, 2022.</a></p>
 	</footer>
 </body>
 </html>
